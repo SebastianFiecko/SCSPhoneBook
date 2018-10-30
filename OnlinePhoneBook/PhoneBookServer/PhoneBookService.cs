@@ -29,10 +29,19 @@ namespace PhoneBookServer
             return true;
         }
 
-
-
-        static void Main(string[] args)
+        
+        public PhoneBookRecord FindPerson(string name)
         {
+            if (_records.ContainsKey(name))
+                return _records[name];
+
+            foreach(var record in _records)
+            {
+                if (record.Key.ToLower().Contains(name.ToLower()))
+                    return record.Value;
+            }
+
+            return null;
         }
     }
 }

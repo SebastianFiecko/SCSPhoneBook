@@ -11,10 +11,7 @@ namespace PhoneBookServer
     class PhoneBookService : ScsService, IPhoneBookService
     {
         private readonly SortedList<string, PhoneBookRecord> _records;
-        public PhoneBookService()
-        {
-            _records = new SortedList<string, PhoneBookRecord>();
-        }
+        public PhoneBookService() => _records = new SortedList<string, PhoneBookRecord>();
 
         public void AddPerson(PhoneBookRecord recordToAdd)
         {

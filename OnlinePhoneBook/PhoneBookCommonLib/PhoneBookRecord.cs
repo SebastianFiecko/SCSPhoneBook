@@ -11,13 +11,9 @@ namespace PhoneBookCommonLib
     {
         public string Name { get; set; }
         public string Phone { get; set; }
-
         public DateTime CreationDate { get; set; }
 
-        public PhoneBookRecord()
-        {
-            CreationDate = DateTime.Now;
-        }
+        public PhoneBookRecord() => CreationDate = DateTime.Now;
 
         public override string ToString()
         {
